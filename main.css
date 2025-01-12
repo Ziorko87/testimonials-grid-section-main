@@ -168,22 +168,40 @@ header {
     height: 100vh;
   }
   .grid-container {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 263px);
     grid-template-rows: auto auto;
+    gap: 1.5rem;
     max-width: 1080px;
     padding-block: 0;
     padding-inline: 0;
   }
   .card:nth-of-type(1) {
     grid-column: 1/3;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
   }
-  .card:nth-of-type(5) {
-    grid-column: 4;
-    grid-row: 1/3;
+  .grid-container .card:nth-of-type(3) {
+    .card-body {
+      p {
+        padding-inline-end: 10px;
+        line-height: 1.2;
+      }
+      p:last-of-type {
+        font-size: 12.9px;
+        line-height: 1.45;
+        padding-inline-end: 0;
+      }
+    }
   }
   .card:nth-of-type(4) {
     grid-column: 2/4;
     grid-row: 2;
+  }
+
+  .card:nth-of-type(5) {
+    grid-column: 4;
+    grid-row: 1/3;
   }
   .card {
     border-radius: 8px;
@@ -191,7 +209,7 @@ header {
     padding-block: 1.5rem;
   }
   header {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     img {
       border-radius: 50%;
       width: 27px;
@@ -213,11 +231,11 @@ header {
     p:last-of-type {
       font-size: 12.4px;
       color: var(--White);
-      line-height: 1.5;
+      line-height: 1.45;
       padding-inline-end: 0;
-      padding-bottom: 5px;
     }
   }
+
   .card:nth-of-type(4) {
     .card-body {
       p:first-of-type {
@@ -228,7 +246,7 @@ header {
       p:last-of-type {
         padding-inline-end: 0;
         opacity: 75%;
-        padding-bottom: ;
+        padding-bottom: 0;
       }
     }
   }
